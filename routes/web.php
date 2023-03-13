@@ -7,6 +7,7 @@ use App\Http\Controllers\CreatePostController;
 use App\Http\Controllers\MainMenuController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\DropInfoController;
+use App\Http\Controllers\SavePasswordController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -20,6 +21,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+Route::get('/request', [SavePasswordController::class, 'index'])->name('/{$email}.index');
+
+Route::get('/save_password', function () {
+    return view('savePassword');
+});
 
 Route::get('/', function () {
     Auth::logout(); 

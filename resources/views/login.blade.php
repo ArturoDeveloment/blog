@@ -13,7 +13,7 @@
                 @if(session('texto'))
                 <div class="row "><p>{{ session('texto') }}</p></div>
                 @endif
-                <div class="row pb-3"><a href="#">¿Olvido su contraseña?</a></div>
+                <div class="row pb-3"><a href="/save_password">¿Olvido su contraseña?</a></div>
                 <button type="submit" class="btn btn-primary col-4 mx-4">Enviar</button>
                 <a href="/registro" type="submit" class="btn btn-primary col-4 mx-2"> Registrarse </a>
         </div>
